@@ -4,7 +4,7 @@
 
 If you don't already have an account for the Mac App Store, follow the instructions on Apple Support to <a href="https://support.apple.com/kb/PH11499?locale=en_US" target="_blank">create a Mac App Store account</a>.
 
-Before class starts, we suggest you upgrade your operating system to OS X Maverick or Yosemite. We don't recommend you use El Capitan *yet*, because some of the tools we use have not been updated for El Capitan. **Do not upgrade your operating system during WDI.**
+Before class starts, we suggest you upgrade your operating system to OS X Maverick, Yosemite or El Capitan.  If you're on an older machine with 4GB or less of memory, please stick to OS X Maverick.  Also, if Apple happens to release a newer version of OS X while you're in WDI; don't update until your instructors tell you to.
 
 To check what version of OS X you're running:
 
@@ -12,7 +12,7 @@ To check what version of OS X you're running:
 2. Select "About This Mac" from the dropdown menu.
 3. Read the version information from the window that pops up.
 
-If you are not using Maverick or Yosemite, detailed instructions for upgrading your operating system are available through Apple support: <a href="https://www.apple.com/support/osx/upgrade" target="_blank">How to upgrade to OS X Yosemite</a>.
+If you are not using Maverick (10.9) Yosemite (10.10) or El Capitan (10.11), detailed instructions for upgrading your operating system are available through Apple support: <a href="https://www.apple.com/support/osx/upgrade" target="_blank">How to upgrade to OS X Yosemite</a>.
 
 ### Install Command Line Tools from the Terminal
 
@@ -31,13 +31,13 @@ If you are not using Maverick or Yosemite, detailed instructions for upgrading y
 
 ## Homebrew
 
-**Note:** When copying the code snippets, exclude the `$` as you run the code in your Terminal. The `$` is simply an indicator of the user in the Terminal.
+__Note:  when copying the code snippets, please exclude the `$` as you paste and run the code into your terminal.  The dollar sign `$` is simply an indicator of the logged-in user in examples.__
 
 <a href="http://brew.sh" target="_blank">Homebrew</a> is a *package manager* for OS X. We'll use it to quickly download and install other tools we need, or to update already installed tools.
 
 1. Open the Terminal application, and run `which brew` to check if you have Homebrew installed already. The `which` Terminal command shows where on your computer a program is installed. If it is installed, the Terminal will output a file path. If it is not installed, the Terminal won't output anything.
 
-2. **Only if you do not have Homebrew installed**, run the command below to install Homebrew. Wait while Homebrew is downloads and installs.
+2. **Only if you do not have Homebrew installed**, run the command below to install Homebrew. Wait while Homebrew downloads and installs.
 
 	```bash
 	$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -47,9 +47,9 @@ If you are not using Maverick or Yosemite, detailed instructions for upgrading y
 
 3. Run `brew update` to update Homebrew.
 
-4. Run `brew doctor` in your Terminal to check that Homebrew and any current packages are installed correctly. If there are issues, `brew doctor` will list suggestions for how to fix them.  Follow these suggestions one by one. If you're not sure what to do, ask!
+4. Run `brew doctor` in your Terminal to check that Homebrew and any current packages are installed correctly. If there are issues, `brew doctor` will list suggestions for how to fix them.  Follow these suggestions one by one. If you're not sure what to do, **ask!**
 
-5. You may need to edit your `~/.bash_profile` to include the path to Homebrew if `brew doctor` shows warnings.
+5. Based on the errors in the step above, you may need to edit your `~/.bash_profile` to include the path to Homebrew if `brew doctor` shows warnings.  If in doubt ask for help here.
 
 	```bash
 	$ bash echo 'export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"' >> ~/.bash_profile
@@ -144,19 +144,6 @@ When you forget to enter a commit message in the Terminal, git opens a text edit
 	$ git config --global core.editor "subl"
 	```
 
-## zsh
-
-`zsh` (or "z-shell") is an alternative shell for your Terminal (the default shell is called `bash`). `zsh` provides features for more interactive Terminal use. We'll use <a href="https://github.com/robbyrussell/oh-my-zsh" target="_blank">oh-my-zsh</a> to manage our `zsh` configuration.
-
-1. Paste this command into your Terminal to install oh-my-zsh:
-
-	```bash
-	sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-	```
-
-2. Open up your Terminal preferences, and in the "General" tab, make sure you have `/bin/zsh` as the command your shell opens with:
-
-	![screen shot 2015-10-25 at 16 08 17](https://cloud.githubusercontent.com/assets/7833470/10718542/b8e13014-7b32-11e5-9182-a65e8d279bd3.png)
 
 ## Chrome
 
